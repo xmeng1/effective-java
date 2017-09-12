@@ -59,28 +59,23 @@ public class NutritionFactsBuilder {
             this.servingSize = servingSize;
             this.servings = servings;
         }
-
         //step2-4: create method to set the other optional properties, these method should return this, which is the builder itself which used for chain operation.
         public Builder calories(int val) {
             calories = val;
             return this;
         }
-
         public Builder fat(int val) {
             fat = val;
             return this;
         }
-
         public Builder carbohydrate(int val) {
             carbohydrate = val;
             return this;
         }
-
         public Builder sodium(int val) {
             sodium = val;
             return this;
         }
-
         //step2-5: we can also make some predefined method
         public Builder preTrainingSet() {
             calories = 1000;
@@ -89,14 +84,9 @@ public class NutritionFactsBuilder {
             sodium = 10;
             return this;
         }
-
         //step2-6: create public build method to return the target class by using this builder
-
         public NutritionFactsBuilder build(){
             return new NutritionFactsBuilder(this);
         }
-
     }
-
-
 }
