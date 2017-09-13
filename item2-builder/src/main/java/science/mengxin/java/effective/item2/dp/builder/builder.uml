@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>science.mengxin.java.effective.item2.dp.builder</OriginalElement>
+  <nodes>
+    <node x="239.0" y="358.5">science.mengxin.java.effective.item2.dp.builder.SpicyPizzaBuilder</node>
+    <node x="0.0" y="358.5">science.mengxin.java.effective.item2.dp.builder.HawaiianPizzaBuilder</node>
+    <node x="181.5" y="168.0">science.mengxin.java.effective.item2.dp.builder.PizzaBuilder</node>
+    <node x="234.0" y="0.0">science.mengxin.java.effective.item2.dp.builder.Pizza</node>
+    <node x="478.0" y="358.0">science.mengxin.java.effective.item2.dp.builder.Waiter</node>
+    <node x="255.625" y="504.0">science.mengxin.java.effective.item2.dp.builder.BuilderExample</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="science.mengxin.java.effective.item2.dp.builder.BuilderExample" target="science.mengxin.java.effective.item2.dp.builder.SpicyPizzaBuilder">
+      <point x="0.0" y="-25.5" />
+      <point x="0.0" y="47.5" />
+    </edge>
+    <edge source="science.mengxin.java.effective.item2.dp.builder.HawaiianPizzaBuilder" target="science.mengxin.java.effective.item2.dp.builder.PizzaBuilder">
+      <point x="0.0" y="-47.5" />
+      <point x="109.5" y="333.0" />
+      <point x="237.16666666666669" y="333.0" />
+      <point x="-111.33333333333333" y="70.0" />
+    </edge>
+    <edge source="science.mengxin.java.effective.item2.dp.builder.BuilderExample" target="science.mengxin.java.effective.item2.dp.builder.HawaiianPizzaBuilder">
+      <point x="-61.33333333333334" y="-25.5" />
+      <point x="286.29166666666663" y="479.0" />
+      <point x="109.5" y="479.0" />
+      <point x="0.0" y="47.5" />
+    </edge>
+    <edge source="science.mengxin.java.effective.item2.dp.builder.Waiter" target="science.mengxin.java.effective.item2.dp.builder.PizzaBuilder">
+      <point x="0.0" y="-48.0" />
+      <point x="598.0" y="333.0" />
+      <point x="459.8333333333333" y="333.0" />
+      <point x="111.33333333333331" y="70.0" />
+    </edge>
+    <edge source="science.mengxin.java.effective.item2.dp.builder.SpicyPizzaBuilder" target="science.mengxin.java.effective.item2.dp.builder.PizzaBuilder">
+      <point x="0.0" y="-47.5" />
+      <point x="0.0" y="70.0" />
+    </edge>
+    <edge source="science.mengxin.java.effective.item2.dp.builder.PizzaBuilder" target="science.mengxin.java.effective.item2.dp.builder.Pizza">
+      <point x="83.5" y="-70.0" />
+      <point x="432.0" y="143.0" />
+      <point x="405.75" y="143.0" />
+      <point x="57.25" y="59.0" />
+    </edge>
+    <edge source="science.mengxin.java.effective.item2.dp.builder.BuilderExample" target="science.mengxin.java.effective.item2.dp.builder.Waiter">
+      <point x="61.33333333333334" y="-25.5" />
+      <point x="408.95833333333337" y="479.0" />
+      <point x="598.0" y="479.0" />
+      <point x="0.0" y="48.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.9095652173913044" x="359.3087954110899" y="269.51242829827913" />
+  <SelectedNodes>
+    <node>science.mengxin.java.effective.item2.dp.builder.PizzaBuilder</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
