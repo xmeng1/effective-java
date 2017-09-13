@@ -1,4 +1,4 @@
-package science.mengxin.java.effective.item2.design_pattern;
+package science.mengxin.java.effective.item2.dp.builder;
 
 /**
  * User:    mengxin

@@ -1,4 +1,4 @@
-package science.mengxin.java.effective.item2.design_pattern;
+package science.mengxin.java.effective.item2.dp.builder;
 
 /**
  * User:    mengxin
@@ -7,8 +7,7 @@ package science.mengxin.java.effective.item2.design_pattern;
  * Package: science.mengxin.java.effective.item2.design_pattern
  * Description: Pizza.
  * <p>
- *     This class is "Product", the target we need to build.
- *     There is no constructor for the class. we can set several setter for the properties.
+ *      x§
  *
  * </p>
  * @author mengxin
