@@ -33,6 +33,8 @@ public class Elvis2Improve implements Serializable {
 
     //for deserialization
     //readResolve method to preserve singleton property
+    //sf: readResolve is used for replacing the object read from the stream. The only use I've ever seen for this is enforcing singletons; when an object is read, replace it with the singleton instance. This ensures that nobody can create another instance by serializing and deserializing the singleton.
+    //https://stackoverflow.com/questions/1168348/java-serialization-readobject-vs-readresolve
     private Object readResolve() {
         //Return the one true Elvis and let the garbage collector
         //take care of the Elvis impersonator.

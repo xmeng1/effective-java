@@ -57,3 +57,7 @@ buildNumber.properties
 # Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
 !/.mvn/wrapper/maven-wrapper.jar
 
+item2-builder/src/main/resources/
+item2-builder/src/test/
+src/main/resources/
+test
