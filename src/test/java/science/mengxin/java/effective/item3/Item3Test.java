@@ -1,6 +1,10 @@
 package science.mengxin.java.effective.item3;
 
+import static junit.framework.TestCase.assertTrue;
+
 import item3.Elvis1;
+import item3.Elvis1Improve;
+import item3.Elvis1ImproveException;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import org.junit.Test;
@@ -52,5 +56,36 @@ public class Item3Test {
 
         assert elvis1 != elvis2;
 
+    }
+
+    //@Test(expected = Elvis1ImproveException.class)
+    @Test
+    public void Elvis1ImproveReflectionTest() {
+        Elvis1Improve elvis1 = Elvis1Improve.INSTANCE;
+        System.out.println(elvis1);
+
+        // according to refection, we create second instance which is different.
+        Constructor<Elvis1Improve> constructor=
+                (Constructor<Elvis1Improve>) Elvis1Improve.class.getDeclaredConstructors()[0];
+        constructor.setAccessible(true);
+        Elvis1Improve elvis2 = null;
+        try {
+            //throw the Elvis1ImproveException
+            elvis2 = constructor.newInstance();
+        } catch (InstantiationException | IllegalAccessException | InvocationTargetException e) {
+            assertTrue(e instanceof InvocationTargetException);
+            //the exception is throw in the private constructor
+            assertTrue(e.getCause() instanceof Elvis1ImproveException);
+        }
+        // System.out.println(elvis2);
+
+        // assert elvis2 == null;
+
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testExpected()
+    {
+        throw new IllegalArgumentException();
     }
 }
