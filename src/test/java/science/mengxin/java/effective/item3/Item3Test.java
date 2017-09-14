@@ -5,8 +5,16 @@ import static junit.framework.TestCase.assertTrue;
 import item3.Elvis1;
 import item3.Elvis1Improve;
 import item3.Elvis1ImproveException;
+import item3.Elvis2;
+import item3.Elvis2Improve;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
+import org.junit.Assert;
 import org.junit.Test;
 
 /**
@@ -82,6 +90,62 @@ public class Item3Test {
         // assert elvis2 == null;
 
     }
+
+    @Test
+    public void Elvis2Deserializable() throws Exception{
+
+        //serializable
+        serializable(Elvis2.getInstance(), "test");
+
+        //deserializable
+        Elvis2 singleton = deserializable("test");
+
+        //the instance change!!!
+        Assert.assertNotEquals(singleton, Elvis2.getInstance());
+    }
+
+    @Test
+    public void Elvis2ImprovedDeserializable() throws Exception{
+
+        //serializable
+        serializable2(Elvis2Improve.getInstance(), "test");
+
+        //deserializable
+        Elvis2Improve singleton = deserializable2("test");
+
+        //the instance is same!!!
+        Assert.assertEquals(singleton, Elvis2Improve.getInstance());
+    }
+
+    private void serializable2(Elvis2Improve singleton, String filename) throws IOException {
+        FileOutputStream fos = new FileOutputStream(filename);
+        ObjectOutputStream oos = new ObjectOutputStream(fos);
+        oos.writeObject(singleton);
+        oos.flush();
+    }
+
+    @SuppressWarnings("unchecked")
+    private <T> T deserializable2(String filename) throws IOException, ClassNotFoundException {
+        FileInputStream fis = new FileInputStream(filename);
+        ObjectInputStream ois = new ObjectInputStream(fis);
+        return (T) ois.readObject();
+    }
+
+
+    private void serializable(Elvis2 singleton, String filename) throws IOException {
+        FileOutputStream fos = new FileOutputStream(filename);
+        ObjectOutputStream oos = new ObjectOutputStream(fos);
+        oos.writeObject(singleton);
+        oos.flush();
+    }
+
+    @SuppressWarnings("unchecked")
+    private <T> T deserializable(String filename) throws IOException, ClassNotFoundException {
+        FileInputStream fis = new FileInputStream(filename);
+        ObjectInputStream ois = new ObjectInputStream(fis);
+        return (T) ois.readObject();
+    }
+
 
     @Test(expected = IllegalArgumentException.class)
     public void testExpected()
