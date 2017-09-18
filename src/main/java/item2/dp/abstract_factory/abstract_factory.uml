@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>science.mengxin.java.effective.item2.dp.abstract_factory</OriginalElement>
+  <nodes>
+    <node x="257.3601851851852" y="0.0">science.mengxin.java.effective.item2.dp.abstract_factory.Expression</node>
+    <node x="0.0" y="169.0">science.mengxin.java.effective.item2.dp.abstract_factory.PCPhrase</node>
+    <node x="218.0" y="169.5">science.mengxin.java.effective.item2.dp.abstract_factory.Factory</node>
+    <node x="100.23518518518517" y="338.0">science.mengxin.java.effective.item2.dp.abstract_factory.PCFactory</node>
+    <node x="299.9342592592592" y="484.0">science.mengxin.java.effective.item2.dp.abstract_factory.Client</node>
+    <node x="499.0" y="169.0">science.mengxin.java.effective.item2.dp.abstract_factory.NotPCPhrase</node>
+    <node x="471.26666666666665" y="338.0">science.mengxin.java.effective.item2.dp.abstract_factory.NotPCFactory</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="science.mengxin.java.effective.item2.dp.abstract_factory.NotPCFactory" target="science.mengxin.java.effective.item2.dp.abstract_factory.NotPCPhrase">
+      <point x="1.4210854715202004E-14" y="-48.0" />
+      <point x="575.2666666666667" y="313.0" />
+      <point x="597.5" y="313.0" />
+      <point x="0.0" y="59.5" />
+    </edge>
+    <edge source="science.mengxin.java.effective.item2.dp.abstract_factory.PCFactory" target="science.mengxin.java.effective.item2.dp.abstract_factory.Expression">
+      <point x="0.0" y="-48.0" />
+      <point x="192.73518518518517" y="313.0" />
+      <point x="207.5" y="313.0" />
+      <point x="207.5" y="149.0" />
+      <point x="313.1601851851852" y="149.0" />
+      <point x="-37.19999999999999" y="59.5" />
+    </edge>
+    <edge source="science.mengxin.java.effective.item2.dp.abstract_factory.Client" target="science.mengxin.java.effective.item2.dp.abstract_factory.PCFactory">
+      <point x="-46.0" y="-25.5" />
+      <point x="345.9342592592592" y="459.0" />
+      <point x="192.73518518518517" y="459.0" />
+      <point x="0.0" y="48.0" />
+    </edge>
+    <edge source="science.mengxin.java.effective.item2.dp.abstract_factory.NotPCFactory" target="science.mengxin.java.effective.item2.dp.abstract_factory.Expression">
+      <point x="69.33333333333329" y="-48.0" />
+      <point x="644.5999999999999" y="313.0" />
+      <point x="706.5" y="313.0" />
+      <point x="706.5" y="139.0" />
+      <point x="424.76018518518515" y="139.0" />
+      <point x="74.39999999999998" y="59.5" />
+    </edge>
+    <edge source="science.mengxin.java.effective.item2.dp.abstract_factory.PCFactory" target="science.mengxin.java.effective.item2.dp.abstract_factory.Factory">
+      <point x="61.666666666666686" y="-48.0" />
+      <point x="254.40185185185186" y="313.0" />
+      <point x="283.25" y="313.0" />
+      <point x="-65.25" y="59.0" />
+    </edge>
+    <edge source="science.mengxin.java.effective.item2.dp.abstract_factory.PCPhrase" target="science.mengxin.java.effective.item2.dp.abstract_factory.Expression">
+      <point x="0.0" y="-59.5" />
+      <point x="98.5" y="139.0" />
+      <point x="275.9601851851852" y="139.0" />
+      <point x="-74.4" y="59.5" />
+    </edge>
+    <edge source="science.mengxin.java.effective.item2.dp.abstract_factory.Factory" target="science.mengxin.java.effective.item2.dp.abstract_factory.Expression">
+      <point x="0.0" y="-59.0" />
+      <point x="348.5" y="149.0" />
+      <point x="350.3601851851852" y="149.0" />
+      <point x="0.0" y="59.5" />
+    </edge>
+    <edge source="science.mengxin.java.effective.item2.dp.abstract_factory.NotPCFactory" target="science.mengxin.java.effective.item2.dp.abstract_factory.Factory">
+      <point x="-69.33333333333331" y="-48.0" />
+      <point x="505.9333333333334" y="313.0" />
+      <point x="413.75" y="313.0" />
+      <point x="65.25" y="59.0" />
+    </edge>
+    <edge source="science.mengxin.java.effective.item2.dp.abstract_factory.NotPCPhrase" target="science.mengxin.java.effective.item2.dp.abstract_factory.Expression">
+      <point x="0.0" y="-59.5" />
+      <point x="597.5" y="149.0" />
+      <point x="387.56018518518516" y="149.0" />
+      <point x="37.19999999999999" y="59.5" />
+    </edge>
+    <edge source="science.mengxin.java.effective.item2.dp.abstract_factory.PCFactory" target="science.mengxin.java.effective.item2.dp.abstract_factory.PCPhrase">
+      <point x="-61.66666666666663" y="-48.0" />
+      <point x="131.06851851851854" y="313.0" />
+      <point x="98.5" y="313.0" />
+      <point x="0.0" y="59.5" />
+    </edge>
+    <edge source="science.mengxin.java.effective.item2.dp.abstract_factory.Client" target="science.mengxin.java.effective.item2.dp.abstract_factory.NotPCFactory">
+      <point x="46.0" y="-25.5" />
+      <point x="437.9342592592592" y="459.0" />
+      <point x="575.2666666666667" y="459.0" />
+      <point x="0.0" y="48.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="353.5" y="267.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

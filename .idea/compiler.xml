@@ -10,8 +10,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="effective-java" target="1.5" />
-      <module name="item2-builder" target="1.5" />
+      <module name="effective-java" target="1.7" />
+      <module name="item2-builder" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
