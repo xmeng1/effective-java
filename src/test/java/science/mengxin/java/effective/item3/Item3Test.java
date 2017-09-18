@@ -7,6 +7,7 @@ import item3.Elvis1Improve;
 import item3.Elvis1ImproveException;
 import item3.Elvis2;
 import item3.Elvis2Improve;
+import item3.Elvis3;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -108,31 +109,45 @@ public class Item3Test {
     public void Elvis2ImprovedDeserializable() throws Exception{
 
         //serializable
-        serializable2(Elvis2Improve.getInstance(), "test");
+        serializable(Elvis2Improve.getInstance(), "test");
 
         //deserializable
-        Elvis2Improve singleton = deserializable2("test");
+        Elvis2Improve singleton = deserializable("test");
 
         //the instance is same!!!
         Assert.assertEquals(singleton, Elvis2Improve.getInstance());
     }
 
-    private void serializable2(Elvis2Improve singleton, String filename) throws IOException {
-        FileOutputStream fos = new FileOutputStream(filename);
-        ObjectOutputStream oos = new ObjectOutputStream(fos);
-        oos.writeObject(singleton);
-        oos.flush();
+
+    @Test
+    public void Elvis3ReflectionTest() {
+        Elvis3 elvis3_1 = Elvis3.INSTANCE;
+        System.out.println(elvis3_1);
+        // according to refection, we create second instance which is different.
+        try {
+            Constructor<Elvis3> constructor =
+                    (Constructor<Elvis3>) Elvis3.class.getDeclaredConstructors()[0];
+            constructor.setAccessible(true);
+        } catch (IllegalArgumentException e){
+            //cannot
+            System.out.println(e.getMessage());
+        }
     }
 
-    @SuppressWarnings("unchecked")
-    private <T> T deserializable2(String filename) throws IOException, ClassNotFoundException {
-        FileInputStream fis = new FileInputStream(filename);
-        ObjectInputStream ois = new ObjectInputStream(fis);
-        return (T) ois.readObject();
+    @Test
+    public void Elvis3Deserializable() throws Exception{
+
+        //serializable
+        serializable(Elvis3.INSTANCE, "test");
+
+        //deserializable
+        Elvis3 singleton = deserializable("test");
+
+        //the instance is same!!!
+        Assert.assertEquals(singleton, Elvis3.INSTANCE);
     }
 
-
-    private void serializable(Elvis2 singleton, String filename) throws IOException {
+    private <T> void serializable (T singleton, String filename) throws IOException {
         FileOutputStream fos = new FileOutputStream(filename);
         ObjectOutputStream oos = new ObjectOutputStream(fos);
         oos.writeObject(singleton);
@@ -145,7 +160,6 @@ public class Item3Test {
         ObjectInputStream ois = new ObjectInputStream(fis);
         return (T) ois.readObject();
     }
-
 
     @Test(expected = IllegalArgumentException.class)
     public void testExpected()
