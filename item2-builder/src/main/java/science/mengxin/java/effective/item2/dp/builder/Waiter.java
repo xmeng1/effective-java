@@ -4,7 +4,7 @@ package science.mengxin.java.effective.item2.dp.builder;
  * User:    mengxin
  * Date:    12/09/2017
  * Project: effective-java
- * Package: science.mengxin.java.effective.item2.design_pattern
+ * Package: science.mengxin.java.effective.science.mengxin.java.effective.item2.design_pattern
  * Description: Waiter.
  * <p>
  *     This class is Director which use the builder to build the product. This class is decouple the

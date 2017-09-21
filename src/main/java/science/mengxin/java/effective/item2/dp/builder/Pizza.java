@@ -1,10 +1,10 @@
-package item2.dp.builder;
+package science.mengxin.java.effective.item2.dp.builder;
 
 /**
  * User:    mengxin
  * Date:    12/09/2017
  * Project: effective-java
- * Package: science.mengxin.java.effective.item2.design_pattern
+ * Package: science.mengxin.java.effective.science.mengxin.java.effective.item2.design_pattern
  * Description: Pizza.
  * <p>
  *      x§

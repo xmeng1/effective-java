@@ -4,7 +4,7 @@ package science.mengxin.java.effective.item2;
  * User:    mengxin
  * Date:    11/09/2017
  * Project: effective-java
- * Package: science.mengxin.java.effective.item2
+ * Package: science.mengxin.java.effective.science.mengxin.java.effective.item2
  * Description: NutritionFacts.
  *
  * @author mengxin

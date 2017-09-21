@@ -4,7 +4,7 @@ package science.mengxin.java.effective.item2.dp.abstract_factory;
  * User:    mengxin
  * Date:    13/09/2017
  * Project: effective-java
- * Package: science.mengxin.java.effective.item2.dp.abstract_factory
+ * Package: science.mengxin.java.effective.science.mengxin.java.effective.item2.dp.abstract_factory
  * Description: NotPCFactory.
  *
  * @author mengxin

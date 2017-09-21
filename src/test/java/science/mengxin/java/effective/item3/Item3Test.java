@@ -2,12 +2,6 @@ package science.mengxin.java.effective.item3;
 
 import static junit.framework.TestCase.assertTrue;
 
-import item3.Elvis1;
-import item3.Elvis1Improve;
-import item3.Elvis1ImproveException;
-import item3.Elvis2;
-import item3.Elvis2Improve;
-import item3.Elvis3;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -22,7 +16,7 @@ import org.junit.Test;
  * User:    mengxin
  * Date:    14/09/2017
  * Project: effective-java
- * Package: science.mengxin.java.effective.item3
+ * Package: science.mengxin.java.effective.science.mengxin.java.effective.item3
  * Description: Item3Test.
  *
  * @author mengxin

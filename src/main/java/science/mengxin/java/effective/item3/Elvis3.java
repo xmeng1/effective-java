@@ -1,10 +1,10 @@
-package item3;
+package science.mengxin.java.effective.item3;
 
 /**
  * User:    mengxin
  * Date:    18/09/2017
  * Project: effective-java
- * Package: item3
+ * Package: science.mengxin.java.effective.item3
  * Description: Elvis3.
  *
  * @author mengxin

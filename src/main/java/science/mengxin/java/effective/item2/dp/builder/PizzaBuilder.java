@@ -1,10 +1,10 @@
-package item2.dp.builder;
+package science.mengxin.java.effective.item2.dp.builder;
 
 /**
  * User:    mengxin
  * Date:    12/09/2017
  * Project: effective-java
- * Package: science.mengxin.java.effective.item2.design_pattern
+ * Package: science.mengxin.java.effective.science.mengxin.java.effective.item2.design_pattern
  * Description: PizzaBuilder.
  * <p>
  *     this class is the Abstract Builder. For this class we need have 2 method and 1 property at least.
