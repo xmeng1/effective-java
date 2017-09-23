@@ -13,11 +13,20 @@ package science.mengxin.java.effective.item16.dp.decorator;
 
 // 6. Optional embellishment
 public class BorderDecorator extends Decorator {
-    public BorderDecorator( Widget w ) {
+    //we can extend more property for the concrete decorator
+    private Integer borderWidth;
+
+    public BorderDecorator( Widget w, Integer borderWidth ) {
         super( w );
+        this.borderWidth = borderWidth;
     }
     public void draw() {
         super.draw(); // 7. Delegate to base class and add extra stuff
+        this.drawBorder(this.borderWidth);
         System.out.println("  BorderDecorator");
+    }
+
+    private void drawBorder(Integer borderWidth) {
+        System.out.println("  drawBorder width: " + borderWidth);
     }
 }

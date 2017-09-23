@@ -16,4 +16,5 @@ package science.mengxin.java.effective.item16.dp.decorator;
 public interface Widget {
 
     void draw();
+    void resize();
 }

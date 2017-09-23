@@ -13,10 +13,15 @@ package science.mengxin.java.effective.item16.dp.decorator;
 public class DecoratorDemo {
     public static void main( String[] args ) {
         // 8. Client has the responsibility to compose desired configurations
-        Widget aWidget = new BorderDecorator(
+        Widget aWidget1 = new BorderDecorator(
                 new BorderDecorator(
                         new ScrollDecorator(
-                                new TextField( 80, 24 ))));
+                                new TextField( 80, 24 )),10),20);
+        Widget aWidget =
+                new BorderDecorator(
+                        new ScrollDecorator(
+                                new TextField( 80, 24 )),10);
+        aWidget1.draw();
         aWidget.draw();
     }
 }

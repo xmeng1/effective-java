@@ -29,4 +29,9 @@ public class Decorator implements Widget {
     public void draw() {
         wid.draw();
     }
+
+    @Override
+    public void resize() {
+        wid.resize();
+    }
 }

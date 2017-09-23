@@ -27,4 +27,9 @@ public class TextField implements Widget {
     public void draw() {
         System.out.println("TextField: " + width + ", " + height);
     }
+
+    @Override
+    public void resize() {
+        System.out.println("resize: ");
+    }
 }
