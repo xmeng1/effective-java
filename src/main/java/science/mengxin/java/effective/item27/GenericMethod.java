@@ -1,7 +1,10 @@
 package science.mengxin.java.effective.item27;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -38,6 +41,11 @@ public class GenericMethod {
         return result;
     }
 
+    // Generic static factory method
+    public static <K,V> HashMap<K,V> newHashMap() { return new HashMap<K,V>(); }
+
+
+
     // Simple program to exercise generic method
     public static void main(String[] args) {
         Set<String> guys = new HashSet<String>(Arrays.asList("Tom", "Dick", "Harry"));
@@ -49,5 +57,9 @@ public class GenericMethod {
         Set stooges2 = new HashSet<>(Arrays.asList("Larry2", "Moe2", "Curly2"));
         Set aflCio2 = union(guys2, stooges2);
         System.out.println(aflCio2);
+
+
+        // Parameterized type instance creation with static factory
+        Map<String, List<String>> anagrams = newHashMap();
     }
 }
