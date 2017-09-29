@@ -15,26 +15,35 @@ import java.util.EmptyStackException;
  */
 // Object-based collection - a prime candidate for generics
 
-public class Stack {
+public class Stack<E> {
 
-    private Object[] elements;
+    private E[] elements;
     private int size = 0;
     private static final int DEFAULT_INITIAL_CAPACITY = 16;
 
     public Stack() {
-        elements = new Object[DEFAULT_INITIAL_CAPACITY];
+        //we cannot new E [], As explained in Item 25, you can’t create an array of
+        // a non-reifiable type, such as E.
+        //elements = new E[DEFAULT_INITIAL_CAPACITY];
+
+        //Method1: The first solution directly circumvents the prohibition on generic array creation: create an array of Object and cast it to the generic array type.
+        // This method will get warning: warning: [unchecked] unchecked cast
+        elements = (E[]) new Object[DEFAULT_INITIAL_CAPACITY];
+
+
+        //Method2:
     }
 
-    public void push(Object e) {
+    public void push(E e) {
         ensureCapacity();
         elements[size++] = e;
     }
 
-    public Object pop() {
+    public E pop() {
         if (size == 0) {
             throw new EmptyStackException();
         }
-        Object result = elements[--size];
+        E result = elements[--size];
         elements[size] = null; // Eliminate obsolete reference
         return result;
     }
