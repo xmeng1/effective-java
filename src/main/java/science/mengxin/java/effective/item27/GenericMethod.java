@@ -28,6 +28,7 @@ public class GenericMethod {
     }
 
     // Generic method
+    // Still has some limitations: 3 set type need same.
     public static <E> Set<E> union(Set<E> s1, Set<E> s2) {
 
         Set<E> result = new HashSet<E>(s1);
@@ -43,5 +44,10 @@ public class GenericMethod {
         Set<String> stooges = new HashSet<String>(Arrays.asList("Larry", "Moe", "Curly"));
         Set<String> aflCio = union(guys, stooges);
         System.out.println(aflCio);
+        // type inference
+        Set guys2 = new HashSet<>(Arrays.asList("Tom2", "Dick2", "Harry2"));
+        Set stooges2 = new HashSet<>(Arrays.asList("Larry2", "Moe2", "Curly2"));
+        Set aflCio2 = union(guys2, stooges2);
+        System.out.println(aflCio2);
     }
 }
