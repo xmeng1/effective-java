@@ -17,7 +17,7 @@ import java.util.EmptyStackException;
 
 public class Stack<E> {
 
-    private E[] elements;
+    private Object[] elements;
     private int size = 0;
     private static final int DEFAULT_INITIAL_CAPACITY = 16;
 
@@ -28,10 +28,10 @@ public class Stack<E> {
 
         //Method1: The first solution directly circumvents the prohibition on generic array creation: create an array of Object and cast it to the generic array type.
         // This method will get warning: warning: [unchecked] unchecked cast
-        elements = (E[]) new Object[DEFAULT_INITIAL_CAPACITY];
+        // elements = (E[]) new Object[DEFAULT_INITIAL_CAPACITY];
 
-
-        //Method2:
+        //Method2: elements from E to object. But we need to handle the pop() method
+        elements = new Object[DEFAULT_INITIAL_CAPACITY];
     }
 
     public void push(E e) {
@@ -43,7 +43,11 @@ public class Stack<E> {
         if (size == 0) {
             throw new EmptyStackException();
         }
-        E result = elements[--size];
+
+        // method 2: need cast object to E.
+        @SuppressWarnings("unchecked")
+        E result = (E) elements[--size];
+
         elements[size] = null; // Eliminate obsolete reference
         return result;
     }
@@ -58,4 +62,15 @@ public class Stack<E> {
         }
     }
 
+
+    // Little program to exercise our generic Stack
+    public static void main(String[] args) {
+        Stack<String> stack = new Stack<String>();
+        for (String arg : args) {
+            stack.push(arg);
+        }
+        while (!stack.isEmpty()) {
+            System.out.println(stack.pop().toUpperCase());
+        }
+    }
 }
