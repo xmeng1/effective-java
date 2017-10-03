@@ -57,6 +57,18 @@ class GenericsAndCovariance {
         flist.add(null); // Legal but uninteresting
         // We know that it returns at least Fruit:
         Fruit f = flist.get(0);
+
+        Fruit[] objects = new Fruit[3];
+        objects[0] = new Apple();
+        objects[1] = new Fruit();
+        objects[2] = new Orange();
+
+        List<? extends Fruit> flist2 = Arrays.asList(objects);
+
+        Fruit f1 = flist2.get(0);
+        Fruit f2 = flist2.get(1);
+        Fruit f3 = flist2.get(2);
+
     }
 }
 
